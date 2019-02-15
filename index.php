@@ -1,6 +1,6 @@
 <?php
 #output buffering
-ob_start(); //for testing
+//ob_start(); //for testing
 
 #Error Reporting
 ini_set("display_errors", 1);
@@ -8,11 +8,12 @@ error_reporting(E_ALL);
 
 #require autoload
 require_once ('vendor/autoload.php');
+
 require_once ('model/db-functions.php');
 
 #Start session
 session_start();
-print_r($_SESSION);
+//print_r($_SESSION);
 
 #Connect to database
 $dbh = connect();
@@ -81,4 +82,4 @@ $f3->route("GET|POST /add", function ($f3) {
 #Run Fat-Free
 $f3->run();
 #output buffering
-ob_flush();
+//ob_flush();
