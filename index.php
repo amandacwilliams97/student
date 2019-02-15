@@ -41,6 +41,14 @@ $f3->route('GET /', function($f3) {
     echo $view->render('views/all-students.html');
 });
 
+$f3->route('GET|POST /summary/@sid', function($f3, $params) {
+
+    $sid = $params['sid'];
+
+    $template = new Template();
+    echo $template->render('views/view-student.html');
+});
+
 
 #-------------------------------------------------------------------------------
 #Route to add-student.html
