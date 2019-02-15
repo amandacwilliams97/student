@@ -1,7 +1,7 @@
 <?php
 
-require_once ('/home/awilliam/config.php');
-
+//require_once ('/home/awilliam/config.php');
+require_once  ('config.php');
 function connect()
 {
     try {
