@@ -47,3 +47,20 @@ function addStudent($sid, $last, $first, $birthdate,
     $success=$statement->execute();
     return $success;
 }
+
+function getStudent($sid)
+{
+    global $dbh;
+
+    $sql = "SELECT * FROM student WHERE 'sid'='$sid'";
+    $statement = $dbh->prepare($sql);
+    $statement->execute();
+    $result= $statement->fetch(PDO::FETCH_ASSOC);
+
+    #create student object # last, first, birthdate, gpa, advisor
+    $student = new Student($result['sid'], $result['last'], $result['first'],
+        $result['birthdate'], $result['gpa'], $result['advisor']);
+
+    #returns a student object
+    return $student;
+}
