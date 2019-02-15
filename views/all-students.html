@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Students</title>
+</head>
+<body>
+<h1>Students</h1>
+
+<!--
+<table>
+    <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+    </tr>
+
+    <repeat group="{{ @students }}" value="{{ @student }}">
+        <tr>
+            <td>{{ @student['last'] }}</td>
+            <td>{{ @student['first'] }}</td>
+        </tr>
+    </repeat>
+</table>
+-->
+<ol>
+    <repeat group="{{ @students }}" value="{{ @student }}">
+        <li>{{ @student['last'] }}, {{ @student['first'] }}</li>
+    </repeat>
+
+</ol>
+
+
+
+<!--
+<form method="GET" action="add">
+    <input type="submit" value="Add Student">
+</form>
+-->
+<a href="add">Add a Student</a>
+</body>
+</html>

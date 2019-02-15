@@ -1,0 +1,20 @@
+{
+  "name":"awilliams/328/student/composer.json",
+  "authors": [
+    {
+      "name": "Amanda Williams",
+      "email": "awilliams100@mail.greenriver.edu"
+    },
+    {
+      "name": "Alec Van Etten",
+      "email": "aVan-Etten@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  },
+
+  "autoload": {
+    "clssmap": ["classes/"]
+  }
+}
